@@ -51,39 +51,7 @@
 - Упрощает тестирование и замену источника данных
 
 Диаграмма классов (UML)
-┌─────────────────────────┐
-│      Database           │
-│  ─────────────────────  │
-│  - instance: ?PDO       │
-│  ─────────────────────  │
-│  +getConnection(): PDO  │
-└─────────────────────────┘
-             │
-             │ использует
-             ▼
-┌─────────────────────────┐
-│  AbstractRepository     │
-│  ─────────────────────  │
-│  -pdo: PDO              │
-│  -table: string         │
-│  -primaryKey: string    │
-│  ─────────────────────  │
-│  +findAll(): array      │
-│  +findById(id): ?array  │
-│  +insert(data): int     │
-│  +update(id, data): bool│
-│  +delete(id): bool      │
-└─────────────────────────┘
-             ▲
-             │ наследуют
-    ┌────────┼────────┬────────────┐
-    │        │        │            │
-    │        │        │            │
-┌───┴───┐ ┌─┴───┐ ┌──┴────┐ ┌────┴────┐
-│Teacher│ │Student│ │Lesson │ │Homework │
-│Repository│ │Repository│ │Repository│ │Repository│
-└──────── └───────┘ └───────┘ └─────────┘
-
+<img width="397" height="560" alt="изображение" src="https://github.com/user-attachments/assets/bbe22565-0554-47af-997f-cac066c362a3" />
 ---
 
 Реализованные методы репозиториев
